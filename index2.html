@@ -35,10 +35,6 @@ header.masthead {
 body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
 	font-family: Helvetica, Arial, "微軟正黑體", "Microsoft YaHei", SimHei, Tahoma, sans-serif;
 }
-
-.mySlides {
-  display: none;
-}
   </style>
 </head>
 <body>
@@ -53,9 +49,9 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
 
     <!-- top notes ios -->
     <div id="top-notes-ios" class="w3-bar w3-dark-gray w3-hide">
-        <div class="w3-bar-item">您当前使用的浏览器，不支持安装App。↗</div>
-        <div class="w3-bar-item">点击右上角按钮，然後在弹出的菜单中，点击在 Safari中打开，即可安装</div>
+        <div class="w3-bar-item">您当前使用的浏览器，不支持安装App，请在Safari中打开，即可安装。↗</div>
         <div class="w3-bar-item">若安装后无法正常使用，请删除旧版</div>
+        <!-- 点击右上角按钮，然後在弹出的菜单中，点击在 Safari中打开，即可安装 -->
     </div>
 
     <!-- nav -->
@@ -117,61 +113,19 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
 
 
   <!-- Modal for wait image -->
-  <div id="modal-images" class="w3-modal w3-center">
+  <div id="modal-images" class="w3-modal w3-animate-zoom w3-center">
+    <!--
+    <div class="w3-modal-content" style="max-width:80%">
+      <span class="w3-button w3-red w3-opacity w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <img style="width:100%; height:495px;" src="img/course.gif">
+    </div>
+    -->
     <div class="w3-opacity-max">
       <br>
       <br>
       <br>
     </div>
-
-    <!-- 1 -->
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install01.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container">安装注意事项</div>
-    </div>
-
-    <!-- 2 -->
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install02.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container">2</div>
-    </div>
-
-    <!-- 3 -->
-    <div class="w3-modal-content w3-section mySlides">
-        <img class="w3-grayscale-min w3-animate-right" src="img/install03.jpg" style="width:100%">
-        <div class="w3-display-bottommiddle w3-container">3</div>
-    </div>
-
-    <!-- 4 -->
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install04.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container">4</div>
-    </div>
-
-    <!-- 5 -->
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install05.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container">5</div>
-    </div>
-
-    <!-- 6 -->
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install06.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container">6</div>
-    </div>
-
-    <!-- 7 -->
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install07.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container">7</div>
-    </div>
-
-    <!-- 8 -->
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install07.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container">8</div>
-    </div>
-
+    <img class="w3-modal-content" style="max-width:95%" src="img/course.gif">
   </div>
 
 
@@ -180,9 +134,6 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
 
   <!-- javascript code -->
   <script>
-var myIndex = 0;
-
-
   // change tw <--> cn
   function translateZH() {
     translatePage();
@@ -195,24 +146,6 @@ var myIndex = 0;
       $(this).text('简');
     }
   }
-
-
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {
-      myIndex = 1
-    }
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 2000);
-}
-
-
-
 
   // translate to browser language on page loaded
 	document.addEventListener('DOMContentLoaded', function(event) {
@@ -252,14 +185,10 @@ var myIndex = 0;
 
           window.location.href = 'itms-services://?action=download-manifest&url=https://m.chatyou.cc/chatyou.plist';
 
-        }, 16000);
+        }, 10000);
 
         // show
         document.getElementById('modal-images').style.display = 'block';
-
-        carousel();
-
-
       }, false);
 
     // android
