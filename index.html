@@ -120,11 +120,17 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
 
   <!-- Modal for wait image -->
   <div id="modal-images" class="w3-modal w3-center">
+    <!--
     <div class="w3-opacity-max">
       <br>
       <br>
       <br>
     </div>
+    -->
+    <header class="w3-container w3-pink">
+        <h5>若有安裝过旧版，请先删除後在安装</h5>
+    </header>
+
 
     <!-- 1 -->
     <div class="w3-modal-content w3-section mySlides">
@@ -198,6 +204,7 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
   <!-- javascript code -->
   <script>
 var myIndex = 0;
+var myStop = 0;
 
 
   // change tw <--> cn
@@ -225,7 +232,9 @@ var myIndex = 0;
       myIndex = 1
     }
     x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 2000);
+    if (myStop == 0){
+      setTimeout(carousel, 3000);
+    }
 }
 
 
@@ -260,6 +269,9 @@ var myIndex = 0;
       document.getElementById('download_app').addEventListener('click', function(e){
         // timeout
         setTimeout(function() {
+
+          myStop = 1;
+
           document.getElementById('modal-images').style.display = 'none';
           // goto download
           //window.location.href = 'https://www.pgyer.com/Ava6';
@@ -269,11 +281,13 @@ var myIndex = 0;
 
           window.location.href = 'itms-services://?action=download-manifest&url=https://m.chatyou.cc/chatyou.plist';
 
-        }, 16000);
+        }, 25000);
 
         // show
         document.getElementById('modal-images').style.display = 'block';
 
+        myIndex = 1;
+        myStop = 0;
         carousel();
 
 
