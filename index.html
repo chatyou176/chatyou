@@ -16,7 +16,6 @@
   <title>巧遇</title>
 
   <!-- W3 CSS v4-->
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <link rel="stylesheet" href="css/w3.css">
 
   <!-- Font Awesome Icons -->
@@ -24,23 +23,36 @@
 
   <!-- main css -->
   <style type="text/css">
-header.masthead {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.6)), to(rgba(92, 77, 66, 0.6))),url("img/bg-masthead2.jpg");
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("img/bg-masthead2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: scroll;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
-	font-family: Helvetica, Arial, "微軟正黑體", "Microsoft YaHei", SimHei, Tahoma, sans-serif;
-}
+  header.masthead {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.6)), to(rgba(92, 77, 66, 0.6))),url("img/bg-masthead2.jpg");
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("img/bg-masthead2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 
-.mySlides {
-  display: none;
-}
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
+    font-family: Helvetica, Arial, "微軟正黑體", "Microsoft YaHei", SimHei, Tahoma, sans-serif;
+  }
   </style>
 </head>
 <body>
@@ -49,15 +61,15 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
   <div class="w3-top">
     <!-- top notes android -->
     <div id="top-notes" class="w3-bar w3-dark-gray w3-hide">
-        <div class="w3-bar-item">不支援档案下载功能，请透过其他浏览器在试试。↗</div>
-        <div class="w3-bar-item">若安装后无法正常使用，请删除旧版</div>
+      <div class="w3-bar-item">不支援档案下载功能，请透过其他浏览器在试试。↗</div>
+      <div class="w3-bar-item">若安装后无法正常使用，请删除旧版</div>
     </div>
 
     <!-- top notes ios -->
     <div id="top-notes-ios" class="w3-bar w3-dark-gray w3-hide">
-        <div class="w3-bar-item">您当前使用的浏览器，不支持安装App。↗</div>
-        <div class="w3-bar-item">点击右上角按钮，然後在弹出的菜单中，点击在 Safari中打开，即可安装</div>
-        <div class="w3-bar-item">若安装后无法正常使用，请删除旧版</div>
+      <div class="w3-bar-item">您当前使用的浏览器，不支持安装App。↗</div>
+      <div class="w3-bar-item">点击右上角按钮，然後在弹出的菜单中，点击在 Safari中打开，即可安装</div>
+      <div class="w3-bar-item">若安装后无法正常使用，请删除旧版</div>
     </div>
 
     <!-- nav -->
@@ -84,15 +96,6 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
     <br>
 
     <div class="w3-row w3-center w3-padding-16">
-        <!--
-        <div class="w3-col s6 m6 l6 w3-animate-right">
-          <a href="#"><img id="download_app" class="w3-image" src="img/btn_ios.png"></a>
-        </div>
-
-        <div class="w3-col s6 m6 l6 w3-animate-right">
-          <a href="https://www.pgyer.com/pFHr"><img id="image_btn_android" class="w3-image" src="img/btn_android.png"></a>
-        </div>
-        -->
         <div class="w3-col s12 m12 w3-center">
           <button id="download_app" class="w3-btn w3-red w3-padding-large w3-xlarge w3-wide w3-round-xxlarge">&nbsp下载巧遇&nbsp</button>
         </div>
@@ -103,6 +106,18 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
     <p class="w3-text-sand">让人仰慕跟喜欢是每个人都需要的</p>
     <p class="w3-text-sand">提高你的自信，打开你的视频，遇见真爱就是现在</p>
     <br>
+
+
+    <!--
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_ay8x6LHF0Q?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media;" allowfullscreen></iframe>
+    </div>
+    -->
+    <div id="certificates" class="w3-row w3-center w3-padding w3-center w3-hide">
+      <p class="w3-text-sand">安装企业凭证</p>
+      <img class="w3-modal-content" style="max-width:80%" src="img/video.gif">
+    </div>
+
 
     <!-- phone screen -->
     <div class="w3-row w3-center w3-padding w3-center">
@@ -120,80 +135,11 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
 
   <!-- Modal for wait image -->
   <div id="modal-images" class="w3-modal w3-center">
-    <!--
-    <div class="w3-opacity-max">
-      <br>
-      <br>
-      <br>
-    </div>
-    -->
     <header class="w3-container w3-pink">
         <h5>若有安裝过旧版，请先删除後在安装</h5>
     </header>
 
     <img class="w3-modal-content" style="max-width:95%" src="img/chatyou.gif">
-
-
-
-    <!-- 1
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install01.jpg" style="width:100%">
-      <div class="w3-panel w3-red w3-display-bottommiddle">
-        <div class="w3-large w3-center w3-text-white"><b>安装巧遇，点选「打开」</b></div>
-      </div>
-    </div>
-
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install02.jpg" style="width:100%">
-      <div class="w3-panel w3-red w3-display-bottommiddle">
-        <div class="w3-large w3-center w3-text-white"><b>安装巧遇，点选「安装」</b></div>
-      </div>
-    </div>
-
-    <div class="w3-modal-content w3-section mySlides">
-        <img class="w3-grayscale-min w3-animate-right" src="img/install03.jpg" style="width:100%">
-        <div class="w3-panel w3-red w3-display-bottommiddle">
-          <div class="w3-large w3-center w3-text-white"><b>安装凭证，桌面点选「设置」</b></div>
-        </div>
-    </div>
-
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install04.jpg" style="width:100%">
-      <div class="w3-panel w3-red w3-display-bottommiddle">
-        <div class="w3-large w3-center w3-text-white"><b>安装企业凭证，设置内点选「通用」</b></div>
-      </div>
-    </div>
-
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install05.jpg" style="width:100%">
-      <div class="w3-panel w3-red w3-display-bottommiddle">
-        <div class="w3-large w3-center w3-text-white"><b>安装企业凭证，选取「描述设备与凭证管理」</b></div>
-      </div>
-    </div>
-
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install06.jpg" style="width:100%">
-      <div class="w3-panel w3-red w3-display-bottommiddle">
-        <div class="w3-large w3-center w3-text-white"><b>安装企业凭证，移到「企业级应用」</b></div>
-      </div>
-    </div>
-
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install07.jpg" style="width:100%">
-      <div class="w3-panel w3-red w3-display-bottommiddle">
-        <div class="w3-large w3-center w3-text-white"><b>安装企业凭证，选「信任」</b></div>
-      </div>
-    </div>
-
-    <div class="w3-modal-content w3-section mySlides">
-      <img class="w3-grayscale-min w3-animate-right" src="img/install08.jpg" style="width:100%">
-      <div class="w3-panel w3-red w3-display-bottommiddle">
-        <div class="w3-large w3-center w3-text-white"><b>安装企业凭证，允许「信任」</b></div>
-      </div>
-    </div>
-    -->
-
-
   </div>
 
 
@@ -202,10 +148,6 @@ body, button, input, select, textarea, h1 ,h2, h3, h4, h5, h6 {
 
   <!-- javascript code -->
   <script>
-var myIndex = 0;
-var myStop = 0;
-
-
   // change tw <--> cn
   function translateZH() {
     translatePage();
@@ -218,26 +160,6 @@ var myStop = 0;
       $(this).text('简');
     }
   }
-
-
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {
-      myIndex = 1
-    }
-    x[myIndex-1].style.display = "block";
-    if (myStop == 0){
-      setTimeout(carousel, 3000);
-    }
-}
-
-
-
 
   // translate to browser language on page loaded
 	document.addEventListener('DOMContentLoaded', function(event) {
@@ -268,30 +190,13 @@ var myStop = 0;
       document.getElementById('download_app').addEventListener('click', function(e){
         // timeout
         setTimeout(function() {
-
-          myStop = 1;
-
           document.getElementById('modal-images').style.display = 'none';
-          // goto download
           //window.location.href = 'https://www.pgyer.com/Ava6';
-
-          //ios跳转设置证书配置文件地址
-          //window.location.href = 'BaoJiaF.mobileprovision';
-
           window.location.href = 'itms-services://?action=download-manifest&url=https://m.chatyou.cc/chatyou.plist';
 
         }, 26500);
-
         // show
         document.getElementById('modal-images').style.display = 'block';
-
-        /*
-        myIndex = 1;
-        myStop = 0;
-        carousel();
-        */
-
-
       }, false);
 
     // android
