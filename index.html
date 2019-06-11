@@ -69,7 +69,7 @@
     <div id="top-notes-ios" class="w3-bar w3-dark-gray w3-hide">
       <div class="w3-bar-item">您当前使用的浏览器，不支持安装App。↗</div>
       <div class="w3-bar-item">点击右上角按钮，然後在弹出的菜单中，点击在 Safari中打开，即可安装</div>
-      <div class="w3-bar-item">若安装后无法正常使用，请删除旧版</div>
+      <div class="w3-bar-item">若有安裝过旧版，请先删除後在安装</div>
     </div>
 
     <!-- nav -->
@@ -99,6 +99,14 @@
         <div class="w3-col s12 m12 w3-center">
           <button id="download_app" class="w3-btn w3-red w3-padding-large w3-xlarge w3-wide w3-round-xxlarge">&nbsp下载巧遇&nbsp</button>
         </div>
+    </div>
+    <br>
+
+    <div id="ios-notes" class="w3-panel w3-amber w3-sepia w3-opacity w3-hide w3-animate-opacity">
+      <p>iOS每次更新下载，要先卸载删除旧巧遇</p>
+      <p>之后在Safari浏览器，重新下载巧遇完毕后</p>
+      <p>再设定取得企业信任后</p>
+      <p>才能点击app开启巧遇，请参考影像档</p>
     </div>
     <br>
 
@@ -175,6 +183,8 @@
 
       // show
       document.getElementById("certificates").className += " w3-show";
+
+      document.getElementById("ios-notes").className += " w3-show";
 
 
       // wechat
